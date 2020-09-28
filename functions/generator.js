@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { removeParentheses, trimAll } from './helpers';
+import { removeParentheses, revolvePath, trimAll } from './helpers';
 import { log } from './logger';
 
 const LOCALE_REGEX = /\([a-z]{2}\)/;
@@ -19,7 +19,7 @@ const generateFile = (translations, outDir) => (language, index) => {
   const translationsObject = buildTranslationsObject(formattedTranslations, index);
 
   const data = JSON.stringify(translationsObject, null, 2);
-  const fileName = `${outDir}/${locale}.json`;
+  const fileName = revolvePath(`${outDir}/${locale}.json`);
 
   fs.writeFileSync(fileName, data);
   log(`${fileName} created!\n`);

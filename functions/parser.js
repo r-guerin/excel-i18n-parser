@@ -1,9 +1,10 @@
 import fs from 'fs';
 import xlsx from 'node-xlsx';
 import { generateFile } from './generator';
+import { revolvePath } from './helpers';
 
 const parseFile = (filePath, outDir) => {
-  const fileBuffer = fs.readFileSync('..', '..', '..', `${filePath}`);
+  const fileBuffer = fs.readFileSync(revolvePath(filePath));
   const doc = xlsx.parse(fileBuffer);
 
   const data = doc[0].data;
