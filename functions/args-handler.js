@@ -11,13 +11,13 @@ const argsHandler = () => {
 
       Usage:
 
-      excel-i18n-parser
+      excel-translations-parser
         --filePath=<filePath> 
         --outDir=<outDirectory> 
 
       Example: 
      
-      excel-i18n-parser
+      excel-translations-parser
         --filePath=../../translations.xlsx 
         --outDir=../i18n  
       `,

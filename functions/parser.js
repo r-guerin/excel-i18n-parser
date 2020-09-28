@@ -1,10 +1,9 @@
-import xlsx from 'node-xlsx';
 import fs from 'fs';
-
+import xlsx from 'node-xlsx';
 import { generateFile } from './generator';
 
 const parseFile = (filePath, outDir) => {
-  const fileBuffer = fs.readFileSync(`${__dirname}/${filePath}`);
+  const fileBuffer = fs.readFileSync('..', '..', '..', `${filePath}`);
   const doc = xlsx.parse(fileBuffer);
 
   const data = doc[0].data;
