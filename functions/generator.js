@@ -13,8 +13,9 @@ const translationsBuilder = (index) => (acc, elem) => {
 const buildTranslationsObject = (translations, index) => translations.reduce(translationsBuilder(index), {});
 
 const generateFile = (translations, outDir) => (language, index) => {
-  log(`Processing tranlations for locale ${language} ...`);
   const [locale] = LOCALE_REGEX.exec(language).map(removeParentheses);
+  log(`Processing tranlations for locale ${locale} ...`);
+
   const formattedTranslations = trimAll(translations);
   const translationsObject = buildTranslationsObject(formattedTranslations, index);
 
