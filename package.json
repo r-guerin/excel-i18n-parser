@@ -1,6 +1,6 @@
 {
   "name": "excel-translations-parser",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Parse an Excel file and generate corresponding JSON translation files",
   "main": "index.js",
   "scripts": {
