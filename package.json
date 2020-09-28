@@ -1,0 +1,18 @@
+{
+  "name": "excel-i18n-parser",
+  "version": "1.0.0",
+  "description": "Parse an Excel file and generate corresponding JSON translation files",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "./main.js",
+  "author": "Rémi GUERIN",
+  "license": "MIT",
+  "dependencies": {
+    "esm": "^3.2.25",
+    "fs": "^0.0.1-security",
+    "node-xlsx": "^0.15.0",
+    "yargs": "^16.0.3"
+  }
+}
